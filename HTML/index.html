@@ -1,0 +1,147 @@
+<!--F12 on browser then click on the tag and look at the style, user agent stylesheet is the default styling-->
+<!--Block Level: start new lines and takes full width of the line (<div>, <h1-6>, <p>, <form>)-->
+<!--Inline Level: don't start new lines (<span>, <img>, <a>)-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>HTML Cheat Sheet</title>
+</head>
+
+<body>
+  <a href="semanticsBlog.html">Go to semanticsBlog.html</a>
+
+  <!--Headings-->
+  <h1>Heading One</h1>
+  <h2>Heading Two</h2>
+  <h3>Heading Three</h3>
+  <h4>Heading Four</h4>
+  <h5>Heading Five</h5>
+  <h6>Heading Six</h6>
+
+  <!--p: paragraph-->
+  <!--a: links, target = "_blank" to open in new tab-->
+  <!--strong and em is preferred because they can be stylized with css-->
+  <p>
+    Lorem ipsum sit <a href="http://google.com" target="_blank">amet consectetur</a> adipisicing elit. Perferendis
+    doloremque consequatur dolorem ex commodi quibusdam quasi necessitatibus veniam odio expedita quo placeat in omnis,
+    minus reprehenderit eos laborum at quod.
+  </p>
+  <!--Notice how there is default space between paragraphs-->
+  <p>
+    Lorem <strong>dolor sit</strong> amet consectetur adipisicing elit. Ad nihil dolorum aut quis quod alias voluptatem
+    consectetur recusandae totam <em>dicta.</em> Id qui illum, blanditiis totam sunt ducimus cum numquam quae.
+  </p>
+
+  <!--Lists-->
+  <!--ul: unordered list, usually used for nav bars-->
+  <ul>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+    <li>List Item 4</li>
+  </ul>
+  <!--ol: ordered list-->
+  <ol>
+    <li>List Item 1</li>
+    <li>List Item 2</li>
+    <li>List Item 3</li>
+    <li>List Item 4</li>
+  </ol>
+
+  <!--table, don't use for website layouts, only for data-->
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Elvis Lam</td>
+        <td>elvis@gmail.com</td>
+        <td>35</td>
+      </tr>
+      <tr>
+        <td>Jeff Lam</td>
+        <td>JeffLam502@gmail.com</td>
+        <td>100</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!--br: newline, hr: horizontal line, should not use br, better to use css-->
+  <br>
+  <hr>
+
+  <!--form, action submits the form to a page, methods=POST is to post data to database, and GET is good for things where you're not adding data-->
+  <form action="process.php" methods="POST">
+    <!--Wrap in div because label and input is inline-->
+    <div>
+      <label>First Name</label>
+      <!--name is for grabbing value to database-->
+      <!--placeholder is hint text-->
+      <input type="text" name="firstName" placeholder="Enter first name">
+    </div>
+    <br>
+    <div>
+      <label>Last Name</label>
+      <input type="text" name="lastName">
+    </div>
+    <br>
+    <div>
+      <label>Email</label>
+      <!--type="email"-->
+      <input type="email" name="email">
+    </div>
+    <br>
+    <div>
+      <label>Message</label>
+      <!--Bigger text area-->
+      <textarea name="Message"></textarea>
+    </div>
+    <br>
+    <div>
+      <label>Gender</label>
+      <!--Drop down list-->
+      <select name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </div>
+    <br>
+    <div>
+      <label>Age</label>
+      <!--type="number", value is initial value-->
+      <input type="number" name="age" value="30">
+    </div>
+    <br>
+    <div>
+      <label>Birthday</label>
+      <!--type="date"-->
+      <input type="date" name="birthday">
+    </div>
+    <br>
+    <!--type="submit", submit button-->
+    <input type="submit" name="submit" value="Submit">
+  </form>
+
+  <!--Button, click="" used for javascript-->
+  <button click="someFunction">Click Me</button>
+
+  <!--img: image, use css for sizing, images are inline-->
+  <img src="images/sample.jpg" alt="My Sample Image">
+
+  <!--quotations, blockquote and abbr-->
+  <blockquote cite="http://wherethisquotecamefrom.com">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto illo libero assumenda eligendi perspiciatis
+    culpa deleniti, exercitationem sit, quam ipsa asperiores nisi quisquam maiores et porro facere sed velit aut.
+  </blockquote>
+  <p>The <abbr title="World Wide Web">WWW</abbr> is awesome by <cite>Elvis Lam</cite></p>
+
+
+</body>
+
+</html>
