@@ -1,0 +1,51 @@
+/* * for everything */
+* {
+  /*margin: 0;
+  padding: 0;*/
+}
+body {
+  /*Colors can be color names (red), #, or rgb(x,x,x)*/
+  background-color: #f4f4f4;
+  color: #555555;
+  /*Backup is helvetica then any other sans-serif font*/
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  /*font: normal Arial, Helvetica, sans-serif; same as above*/
+  line-height: 1.6em; /*line spacing, em is unit for css*/
+  margin: 0;
+}
+/* . for class' */
+.box-1 {
+  background-color: #333;
+  color: #fff;
+  /*border*/
+  border-right: 5px red solid;
+  border-left: 5px red solid;
+  border-top: 5px red solid;
+  border-bottom: 5px red solid;
+  border-width: 3px; /*replaces 5px to 3px*/
+  border-bottom-width: 10px; /*target specific side*/
+  border-top-style: dotted;
+  border: 5px red solid; /*same as above, overrides*/
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+  /*padding:20px; same as above*/
+  margin-top:20px; 
+  margin: 20px 0; /*(top bottom) and (right left)*/
+}
+.container {
+  width: 80%; /*width alone without margin auto would start from the left, use percents with width to make things responsive*/
+  margin: auto; /*sets all margins on all sides the same (centers)*/
+}
+.box-1 h1{
+  font-family:Tahoma;
+  font-weight: 800;
+  font-style: italic;
+  text-decoration: underline;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  word-spacing: 1em;
+}
