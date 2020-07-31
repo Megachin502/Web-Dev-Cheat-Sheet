@@ -101,17 +101,80 @@ a:visited {
   display: block; /*label is no longer inline but now displays on new lines*/
 }
 /*[] to target specific type, comma to add another element*/
-.my-form input[type="text"], .my-form textarea{
-  padding:8px;
-  width:100%; /*entire container*/
+.my-form input[type="text"],
+.my-form textarea {
+  padding: 8px;
+  width: 100%; /*entire container*/
 }
-.button{
+.button {
   background-color: #333;
-  color:#fff;
-  padding:10px 15px;
-  border:none;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
 }
-.button:hover{
-  background:red;
-  color:#fff;
+.button:hover {
+  background: red;
+  color: #fff;
+}
+.block {
+  float: left; /*will float beside the container*/
+  width: 33.3%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-sizing: border-box; /*takes padding and border, applies it to the width (so they can remain on the same line), flexbox is better*/
+}
+/*must clear float after using otherwise it will mess up the rest*/
+.clr {
+  clear: both;
+}
+#main-block {
+  float: left;
+  width: 70%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+#sidebar {
+  float: right;
+  width: 30%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.p-box {
+  width: 800px;
+  height: 500px;
+  border: 1px solid #000;
+  margin-top: 30px;
+  /*pair relative with absolute*/
+  position: relative;
+  /*background-image*/
+  background-image: url("/images/bg.jpg");
+  background-position: 100px 200px;
+  background-repeat: no-repeat;
+  background-position: center center; /*centers in container*/
+}
+.p-box h1 {
+  position: absolute; /*absolute means it starts at the begining of the parent container, it would be 100px from the top of the page if .p-box position wasn't relative, but since it is, it can only move within the container*/
+  top: 100px;
+}
+.p-box h2 {
+  position: absolute;
+  bottom: 40px;
+  right: 100px;
+}
+.fix-me {
+  position: fixed; /*fixed means it stays on the page*/
+  top: 400px;
+}
+/*Pseudo classes (targeting specific childs)*/
+.my-list li:first-child {
+  background: red; /*background takes other color or image*/
+}
+.my-list li:last-child {
+  background: blue;
+}
+/*there is also nth-child(even) or odd*/
+.my-list li:nth-child(5) {
+  background: yellow;
 }
