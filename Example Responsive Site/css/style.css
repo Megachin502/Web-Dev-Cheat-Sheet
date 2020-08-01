@@ -2,7 +2,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   /*h1 tags when using font-size are relative to itself*/
   font-size: 15px;
-  line-height: 1.6em;
+  /*without specifying line-height measurement its relative to the size of the font*/
+  line-height: 1.6;
   /*font: 15px/1.6em Arial, Helvetica, sans-serif | same as above*/
   padding: 0;
   margin: 0;
@@ -27,11 +28,11 @@ ul {
   padding-right: 20px;
   color: white;
 }
-.dark{
-  padding:15px;
-  background:#35424a;
-  color:white;
-  margin-top:10px;
+.dark {
+  padding: 15px;
+  background: #35424a;
+  color: white;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 /*Header*/
@@ -108,39 +109,84 @@ header a:hover {
   width: 250px;
 }
 /*boxes*/
-#boxes{
-  margin-top:20px;
+#boxes {
+  margin-top: 20px;
 }
-#boxes .box{
-  float:left;
-  width:30%;
+#boxes .box {
+  float: left;
+  width: 30%;
   padding: 10px;
   /*can be used to align things other than text*/
-  text-align:center;
+  text-align: center;
 }
-#boxes .box img{
+/*targeting id boxes with class inside it .box, its imgs*/
+#boxes .box img {
   width: 90px;
 }
-/*sidebar*/
-#sidebar{
-  float:right;
-  width:30%;
-  margin-top:10px;
+/*sidebar, targeting the element aside with id sidebar*/
+aside#sidebar {
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+aside#sidebar .quote input,
+aside#sidebar .quote textarea {
+  width: 90%;
+  padding: 5px;
 }
 /*main-col*/
-#main-col{
-  float:left;
-  width:65%;
+article#main-col {
+  float: left;
+  width: 65%;
 }
 /*Services*/
-ul #services{
-  
+ul#services li {
+  list-style: none;
+  padding: 20px;
+  border: #ccc solid 1px;
+  margin-bottom: 5px;
+  background-color: #e6e6e6;
 }
 /*footer*/
-footer{
+footer {
   padding: 20px;
-  margin-top:20px;
-  color:white;
+  margin-top: 20px;
+  color: white;
   background-color: #e8491d;
-  text-align:center;
+  text-align: center;
+}
+/*Media Queries, makes responsive on mobile*/
+/*Once 768px, then things take effect*/
+@media (max-width: 768px) {
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar {
+    float: none;
+    text-align: center;
+    width: 100%;
+  }
+  header {
+    padding-bottom: 20px;
+  }
+  #showcase h1 {
+    /*we set initially at 100px, setting it to 40px now*/
+    margin-top: 40px;
+  }
+  #newsletter button,
+  .quote button {
+    /*make its so button is always on a new line*/
+    display: block;
+    width: 100%;
+  }
+  #newsletter form input[type="email"],
+  .quote input,
+  .quote textarea {
+    width: 100%;
+    margin-bottom: 5px;
+  }
 }
