@@ -9,7 +9,7 @@ body {
 .container {
   width: 80%;
   margin: auto;
-  /*use overflow:hidden to fill white space between divs*/
+  /*use overflow:hidden because when containers use padding ,it messes up with parent containers*/
   overflow: hidden;
 }
 #main-header {
