@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Flexbox</title>
+  </head>
+  <style>
+    .container-1 {
+      /*tells container its a flexbox*/
+      display: flex;
+      /*flex-direction: direction of the boxes, column or row (default is row)*/
+      flex-direction: row;
+      /*align-items: aligns boxes based on axis row (x) or column (y), flex-start is top y or left of x, flex-end is bottom of y or right of x, center is centering the boxes (x,y) (these are based on the amount of content and the size of the boxes (flex:), without the property each box takes 100% width*/
+      /*align-items: flex-start;*/
+    }
+    .container-1 div,
+    .container-2 div,
+    .container-3 div {
+      border: 1px #ccc solid;
+      padding: 10px;
+    }
+    .box-1 {
+      /*flex: is the size ratio of the other flex boxes*/
+      flex: 2;
+      /*order: display order of the boxes*/
+      order: 2;
+    }
+    .box-2 {
+      flex: 1;
+      order: 1;
+    }
+    .box-3 {
+      flex: 1;
+      order: 3;
+    }
+    .container-2 {
+      display: flex;
+      /*justify-content is like align-items but each item is the same size (based on the biggest content), properties are flex-start, flex-end, center, margin properties (only works if flex-direction is row,space-between (adds margins inside), space-evenly & space around(adds margins on inside and sides)) */
+      justify-content: space-evenly;
+    }
+    .container-2-box {
+      /*same as width:, gives width to each box*/
+      flex-basis: 27%;
+    }
+    /*min-width is opposite, for that when things are 768px then apply rules, can put .container-2 and .container-2-box in it with its display:flex properties to do the same thing because default display is block*/
+    @media (max-width: 768px) {
+      .container-1 {
+        display: block;
+      }
+      .container-2 {
+        display: block;
+      }
+    }
+    .container-3{
+      display:flex;
+      /*flex-wrap, another way to make responsive without media query, need flex-basis otherwise flex-direction will be column*/
+      flex-wrap:wrap;
+    }
+    .container-3-box{
+      flex-basis:12%;
+    }
+  </style>
+  <body>
+    <!--container-1 with display:flex, flex-direction box order and flex, flex-->
+    <div class="container-1">
+      <div class="box-1">
+        <h3>Box One</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
+          est.
+        </p>
+      </div>
+      <div class="box-2">
+        <h3>Box Two</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
+          est.
+        </p>
+      </div>
+      <div class="box-3">
+        <h3>Box Three</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
+          est.
+        </p>
+      </div>
+    </div>
+    <!--container-2 with justify-content and flex-basis-->
+    <div class="container-2">
+      <div class="container-2-box">
+        <h3>Box Four</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
+          est.
+        </p>
+      </div>
+      <div class="container-2-box">
+        <h3>Box Five</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
+          est.
+        </p>
+      </div>
+      <div class="container-2-box">
+        <h3>Box Six</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto,
+          est.
+        </p>
+      </div>
+    </div>
+    <!--container-3-->
+    <div class="container-3">
+      <div class="container-3-box">
+        <h3>Box Seven</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum rem doloremque in adipisci sapiente consequatur ipsa at optio nam.
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Eight</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum rem doloremque in adipisci sapiente consequatur ipsa at optio nam.
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Nine</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum rem doloremque in adipisci sapiente consequatur ipsa at optio nam.
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Ten</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum rem doloremque in adipisci sapiente consequatur ipsa at optio nam.
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Eleven</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum rem doloremque in adipisci sapiente consequatur ipsa at optio nam.
+        </p>
+      </div>
+      <div class="container-3-box">
+        <h3>Box Twelve</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur nostrum rem doloremque in adipisci sapiente consequatur ipsa at optio nam.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
